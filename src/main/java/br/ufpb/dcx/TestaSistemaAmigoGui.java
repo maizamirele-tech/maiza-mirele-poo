@@ -1,7 +1,7 @@
 package br.ufpb.dcx;
+import java.util.Scanner;
 
-import java.util.List;
-public class TestaSistemaAmigoGUI {
+public class TestaSistemaAmigoGui {
     public static void main(String[] args) {
 
         SistemaAmigo sistema = new SistemaAmigo();

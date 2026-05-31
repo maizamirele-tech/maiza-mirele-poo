@@ -1,5 +1,5 @@
 package br.ufpb.dcx;
 
-public class AmigoNaoSorteadoException {
-    public AmigoNaoSorteadoException(String msg) { super(msg); }
+public class AmigoNaoSorteadoException extends Exception {
+    public AmigoNaoSorteadoException(String msg) { super(msg);}
 }
