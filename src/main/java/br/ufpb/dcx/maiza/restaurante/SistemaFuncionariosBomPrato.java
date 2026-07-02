@@ -22,14 +22,6 @@ public class SistemaFuncionariosBomPrato implements SistemaFuncionarios {
     }
 
     @Override
-    public void cadastrarFuncionario(Funcionario funcionario) throws FuncionarioJaExisteException {
-        if (this.funcionarios.containsKey(funcionario.getCpf())) {
-            throw new FuncionarioJaExisteException("Já existe funcionário com o cpf " + funcionario.getCpf());
-        }
-        this.funcionarios.put(funcionario.getCpf(), funcionario);
-    }
-
-    @Override
     public boolean funcionarioJaExiste(String cpfFuncionario) {
         return this.funcionarios.containsKey(cpfFuncionario);
     }
@@ -73,6 +65,13 @@ public class SistemaFuncionariosBomPrato implements SistemaFuncionarios {
             }
         }
         return contador;
+    }
+    @Override
+    public void cadastrarFuncionario(Funcionario funcionario) throws FuncionarioJaExisteException {
+        if (this.funcionarios.containsKey(funcionario.getCpf())) {
+            throw new FuncionarioJaExisteException("J� existe funcion�rio com o cpf " + funcionario.getCpf());
+        }
+        this.funcionarios.put(funcionario.getCpf(), funcionario);
     }
 
     // --- QUESTÃO 3 ---

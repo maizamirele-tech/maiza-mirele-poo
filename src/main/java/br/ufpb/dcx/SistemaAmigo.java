@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SistemaAmigo {
-    private List<Mensagem> mensagems = new ArrayList<>();
+    private List<Mensagem> mensagens = new ArrayList<>();
     private List<Amigo> amigos = new ArrayList<>();
 
     public void cadastraAmigo(String nomeAmigo, String emailAmigo) {
