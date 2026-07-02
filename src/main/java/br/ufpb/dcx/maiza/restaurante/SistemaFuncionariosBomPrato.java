@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class SistemaFuncionariosBomPrato implements SistemaFuncionarios {
-
     private Map<String, Funcionario> funcionarios;
 
     public SistemaFuncionariosBomPrato() {
@@ -48,9 +47,6 @@ public class SistemaFuncionariosBomPrato implements SistemaFuncionarios {
     public List<Funcionario> pesquisarFuncionariosPorTipo(TipoFuncionario tipo) {
         List<Funcionario> porTipo = new ArrayList<>();
         for (Funcionario f : this.funcionarios.values()) {
-            if (f.getTipo() == tipo) {
-                porTipo.add(f);
-            }
         }
         return porTipo;
     }
